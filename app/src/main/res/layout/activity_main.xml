@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonReadMagDetect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Read Magnetic Detector"
+        app:layout_constraintBottom_toBottomOf="@+id/labelMagDetect"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPwrCntrlATtiny"
+        app:layout_constraintStart_toEndOf="@+id/labelMagDetect"
+        app:layout_constraintTop_toTopOf="@+id/labelMagDetect" />
+
+    <TextView
+        android:id="@+id/textViewPwrCtrlATtinyResults"
+        android:layout_width="333dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:background="#F8EDFD"
+        android:text="Power Control ATtiny Results"
+        app:layout_constraintStart_toStartOf="@+id/header_i2c3tests"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPwrCntrlATtiny" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonValve2"
+        android:layout_width="87dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="24dp"
+        android:text="ToggleButton"
+        android:textOff="AmbValve Off"
+        android:textOn="AmbValve On"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/labelPump"
+        app:layout_constraintStart_toEndOf="@+id/toggleButtonValve1"
+        app:layout_constraintTop_toTopOf="@+id/labelPump"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/labelAlarms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="0x68 Alarms"
+        app:layout_constraintEnd_toEndOf="@id/header_I2C1tests"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/header_I2C1tests"
+        app:layout_constraintTop_toBottomOf="@+id/labelMagDetect" />
+
+    <TextView
+        android:id="@+id/header_I2C1tests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="i2c-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/header_I2Ctests"
+        app:layout_constraintTop_toBottomOf="@+id/header_I2Ctests"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/header_I2Ctests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="i2c tests"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonPump"
+        android:layout_width="81dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:text="ToggleButton"
+        android:textOff="Pump Off"
+        android:textOn="Pump On"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/labelPump"
+        app:layout_constraintStart_toEndOf="@+id/labelPump"
+        app:layout_constraintTop_toTopOf="@+id/labelPump"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/header_i2c3tests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="i2c-3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/header_I2Ctests"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/labelAlarms"
+        app:layout_constraintTop_toBottomOf="@+id/header_I2Ctests"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonValve1"
+        android:layout_width="87dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="24dp"
+        android:text="ToggleButton"
+        android:textOff="DiffValve Off"
+        android:textOn="DiffValve On"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/labelPump"
+        app:layout_constraintStart_toEndOf="@+id/toggleButtonPump"
+        app:layout_constraintTop_toTopOf="@+id/labelPump"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/labelPump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="0x6d"
+        app:layout_constraintEnd_toEndOf="@id/header_I2C1tests"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/header_I2C1tests"
+        app:layout_constraintTop_toBottomOf="@+id/labelMagDetect" />
+
+    <RadioGroup
+        android:id="@+id/radioButtonAlarms"
+        android:layout_width="266dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="24dp"
+        android:checkedButton="@id/radioButtonAlarmOff"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/labelAlarms"
+        app:layout_constraintStart_toEndOf="@+id/labelAlarms"
+        app:layout_constraintTop_toTopOf="@+id/labelAlarms"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/radioButtonAlarmOff"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:checked="true"
+            android:onClick="i2cCtrl0x68"
+            android:text="Off" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAlarmLow"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_marginLeft="10dp"
+            android:checked="false"
+            android:onClick="i2cCtrl0x68"
+            android:text="Low" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAlarmMed"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_marginLeft="10dp"
+            android:checked="false"
+            android:onClick="i2cCtrl0x68"
+            android:text="Med" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAlarmHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_marginLeft="10dp"
+            android:checked="false"
+            android:onClick="i2cCtrl0x68"
+            android:text="High" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewMagresults"
+        android:layout_width="342dp"
+        android:layout_height="24dp"
+        android:background="#F8EDFD"
+        app:layout_constraintStart_toEndOf="@+id/labelMagDetect"
+        app:layout_constraintTop_toBottomOf="@+id/buttonReadMagDetect" />
+
+    <TextView
+        android:id="@+id/labelMagDetect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0x60"
+        app:layout_constraintEnd_toEndOf="@id/header_I2C1tests"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/header_I2C1tests"
+        app:layout_constraintTop_toBottomOf="@+id/header_I2C1tests" />
+
+    <Button
+        android:id="@+id/buttonPwrCntrlATtiny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:text="Read Power Control ATtiny"
+        app:layout_constraintBottom_toBottomOf="@+id/header_i2c3tests"
+        app:layout_constraintStart_toEndOf="@+id/header_i2c3tests"
+        app:layout_constraintTop_toTopOf="@+id/header_i2c3tests"
+        app:layout_constraintVertical_bias="0.379" />
+
+    <TextView
+        android:id="@+id/header_UART0tests"
+        android:layout_width="62dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="ttymxc0"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="@+id/header_UARTtests"
+        app:layout_constraintTop_toTopOf="@+id/header_I2C1tests" />
+
+    <Button
+        android:id="@+id/buttonReadMassimo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Read Massimo CO2"
+        app:layout_constraintBottom_toBottomOf="@+id/header_UART0tests"
+        app:layout_constraintStart_toEndOf="@+id/header_UART0tests"
+        app:layout_constraintTop_toBottomOf="@+id/header_UARTtests"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewSensorResults"
+        android:layout_width="353dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#F8EDFD"
+        android:text="Sensor Results"
+        app:layout_constraintStart_toStartOf="@+id/header_UART2tests"
+        app:layout_constraintTop_toBottomOf="@+id/buttonReadSensors" />
+
+    <Button
+        android:id="@+id/buttonReadSensors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:text="Read Sensors"
+        app:layout_constraintStart_toEndOf="@+id/header_UART2tests"
+        app:layout_constraintTop_toTopOf="@+id/buttonPwrCntrlATtiny" />
+
+    <TextView
+        android:id="@+id/header_UART2tests"
+        android:layout_width="69dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="4dp"
+        android:text="ttymxc2"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="@+id/header_UART0tests"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/header_UART0tests"
+        app:layout_constraintTop_toTopOf="@+id/header_i2c3tests" />
+
+    <TextView
+        android:id="@+id/header_UARTtests"
+        android:layout_width="78dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="408dp"
+        android:layout_marginTop="52dp"
+        android:text="UART tests"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/header_I2Ctests"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMassimoResults"
+        android:layout_width="343dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:background="#F8EDFD"
+        android:text="Massimo Results"
+        app:layout_constraintStart_toStartOf="@+id/header_UART0tests"
+        app:layout_constraintTop_toBottomOf="@+id/buttonReadMassimo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
